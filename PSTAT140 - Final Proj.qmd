@@ -1,0 +1,53 @@
+---
+title: "DMAIC and SPC Analysis of Ford F-150 Saftey Recalls"
+subtitle: "PSTAT 140 Statistical Process Control - UCSB Summer 2026"
+author: "Edgar Gonzalez Martinez and Andres Alvarez Cardenas"
+date: today
+date-format: "MMMM D, YYYY"
+abstract: | 
+  REPLACE, This project applies the Define, Measure, Analyze, Improve, and Control (DMAIC) methodology to study Ford F-150 safety recalls over time. Recall data will be organized by date, affected vehicle component, severity, and number of vehicles involved. Statistical process control tools will be used to determine whether recall counts remain stable over time and to identify periods with unusually high numbers of recalls. Additional Six Sigma tools, including a SIPOC diagram, process flowchart, Pareto chart, cause-and-effect diagram, check sheet, value stream map, and demerit system, will be used to examine the recall process and identify the vehicle systems associated with the greatest quality and safety concerns. Based on the analysis, recommendations will be developed to improve defect detection, supplier quality, manufacturing controls, and post-market monitoring. The overall goal is to demonstrate how DMAIC and SPC methods can support automotive safety and reduce future recalls.
+format:
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    fig-pos: "H"
+    fig-width: 6
+    fig-height: 4
+    fontsize: 11pt
+    geometry: margin=1in
+    colorlinks: true
+    linkcolor: blue
+    include-in-header:
+      text: |
+        \usepackage{fancyhdr}
+        \usepackage{etoolbox}
+        \pagestyle{fancy}
+        \fancyhead[L]{PSTAT 174 -- Final Project}
+        \fancyhead[R]{Gonzalez Martinez}
+        \fancyfoot[C]{\thepage}
+        \pretocmd{\tableofcontents}{\newpage}{}{}
+execute:
+  warning: false
+  message: false
+---
+
+\newpage
+
+# Introduction (Course Scenario)
+
+# Define Phase
+
+# Measure Phase
+
+# Analyze Phase
+
+# Improve Phase 
+
+# Control Phase 
+
+# Conclusion 
+
+# Appendix 
+
+
