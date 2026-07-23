@@ -1,5 +1,5 @@
 ---
-title: "DMAIC and SPC Analysis of Ford F-150 Saftey Recalls"
+title: "DMAIC and SPC Analysis of Ford F-150 Safety Complaints and Recalls, 2015–2025"
 subtitle: "PSTAT 140 Statistical Process Control - UCSB Summer 2026"
 author: "Edgar Gonzalez Martinez and Andres Alvarez Cardenas"
 date: today
@@ -50,4 +50,38 @@ execute:
 
 # Appendix 
 
+
+## Import Complaints
+
+```{r}
+#| message: false
+#| warning: false
+
+library(jsonlite)
+library(dplyr)
+library(purrr)
+
+years <- 2015:2025
+
+get_complaints <- function(year) {
+  
+  url <- paste0(
+    "https://api.nhtsa.gov/complaints/complaintsByVehicle?",
+    "make=Ford&model=F-150&modelYear=", year
+  )
+  
+  response <- fromJSON(url)
+  
+  if (response$count == 0) {
+    return(NULL)
+  }
+  
+  response$results |>
+    mutate(model_year_searched = year)
+}
+
+f150_complaints <- map_dfr(years, get_complaints)
+
+glimpse(f150_complaints)
+```
 
